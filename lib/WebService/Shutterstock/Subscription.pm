@@ -1,6 +1,6 @@
 package WebService::Shutterstock::Subscription;
 {
-  $WebService::Shutterstock::Subscription::VERSION = '0.003';
+  $WebService::Shutterstock::Subscription::VERSION = '0.004';
 }
 
 # ABSTRACT: Class representing a subscription for a specific Shutterstock customer
@@ -24,6 +24,7 @@ my @fields = qw(
 	  sizes
 	  site
 	  expiration_time
+	  price_per_download
 );
 foreach my $f(@fields){
 	has $f => ( is => 'ro' );
@@ -61,7 +62,7 @@ WebService::Shutterstock::Subscription - Class representing a subscription for a
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 ATTRIBUTES
 
@@ -80,6 +81,8 @@ version 0.003
 =head2 site
 
 =head2 expiration_time
+
+=head2 price_per_download
 
 =head1 METHODS
 
